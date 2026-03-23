@@ -71,12 +71,13 @@ def main() -> None:
     status = rec.get("status", "parse_error")
 
     accepted = ""
-    if args.champion_bpb is not None and val_bpb is not None and status == "ok":
+    metrics_ok = status in ("ok", "timeout")
+    if args.champion_bpb is not None and val_bpb is not None and metrics_ok:
         if val_bpb < args.champion_bpb - args.margin:
             accepted = "yes"
         else:
             accepted = "no"
-    elif status != "ok":
+    elif not metrics_ok:
         accepted = "no"
 
     run_id = args.run_id or str(uuid.uuid4())[:12]

@@ -91,7 +91,7 @@ def parse_training_log(text: str) -> dict[str, Any]:
         status = "oversize"
 
     if status == "ok" and "stopping_early: wallclock_cap" in text:
-        pass  # still ok
+        status = "timeout"
 
     return {
         "val_bpb": val_bpb,

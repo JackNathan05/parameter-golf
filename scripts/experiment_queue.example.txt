@@ -1,0 +1,3 @@
+# One shell command per line. Lines starting with # are ignored.
+# Example (uncomment after you have data + GPU):
+# RUN_ID=batch_001 torchrun --standalone --nproc_per_node=1 train_gpt.py 2>&1 | tee results/runs/batch_001/train.log

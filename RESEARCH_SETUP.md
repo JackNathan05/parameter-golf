@@ -82,3 +82,10 @@ PowerShell: use `run_local.ps1` or set `$env:RUN_ID` etc. the same way.
 | `evaluate_candidate.py` | Append `results/experiments.csv` |
 | `estimate_runtime.py` | Heuristic record-track time label |
 | `results/experiments.csv` | Experiment ledger |
+| `submission_summary.md` | Template for PR / writeup |
+| `scripts/snapshot_best.sh` | Save champion snapshot + `metrics.json` + `git_commit.txt` |
+| `scripts/revert_last.sh` | Restore `train_gpt.py` from `results/best/<tag>/` |
+| `scripts/launch_batch.sh` | Run `scripts/experiment_queue.example.txt` (or custom queue) |
+| `scripts/package_submission.sh` | Bundle `submission_package/<name>/` for review |
+
+Copies of **`docs/PROGRESS.md`** and **`docs/ROADMAP.md`** track lab status and the full development track.
