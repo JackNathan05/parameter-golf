@@ -908,6 +908,9 @@ def main() -> None:
         f"max_wallclock_seconds:{args.max_wallclock_seconds:.3f}"
     )
     log0(f"seed:{args.seed}")
+    _exp_id = os.environ.get("PG_EXPERIMENT_ID", "").strip()
+    if _exp_id:
+        log0(f"pg_experiment_id:{_exp_id}")
 
     # -----------------------------
     # DATA LOADER & MODEL WARMUP

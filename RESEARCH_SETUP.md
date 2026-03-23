@@ -89,3 +89,12 @@ PowerShell: use `run_local.ps1` or set `$env:RUN_ID` etc. the same way.
 | `scripts/package_submission.sh` | Bundle `submission_package/<name>/` for review |
 
 Copies of **`docs/PROGRESS.md`** and **`docs/ROADMAP.md`** track lab status and the full development track.
+
+| File | Purpose |
+|------|---------|
+| `notes/ideas_backlog.md` | Prioritized experiment ideas (Roadmap Phase 6) |
+| `notes/first_experiment.md` | Checklist for first manual run (Roadmap §8 Task 7) |
+| `validate_submission.py` | Pre-PR checklist: parse log, sizes, optional git dirty warning |
+| `run_cloud.ps1` | Windows counterpart to `run_cloud.sh` |
+
+Set **`PG_EXPERIMENT_ID=my_run_name`** when training to log a tag in `train_gpt.py` (helps ledger / reproducibility).
