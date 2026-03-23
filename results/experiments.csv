@@ -1,0 +1,2 @@
+run_id,timestamp,branch,seed,mode,change_summary,val_bpb,artifact_bytes,train_seconds,status,accepted,notes
+e18ae7d6-cc4,2026-03-23T21:02:46Z,,1337,cuda,ledger smoke test,1.12278022,15555017,600.036,ok,yes,
